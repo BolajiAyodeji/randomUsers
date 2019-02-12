@@ -1,8 +1,8 @@
-function createNode(element) {
+let createNode = (element) => {
   return document.createElement(element);
 }
 
-function append(parent, el) {
+let append = (parent, el) => {
 return parent.appendChild(el);
 }
 
@@ -12,7 +12,7 @@ fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
 let authors = data.results;
-return authors.map(function(author) {
+return authors.map((author) => {
   let li = createNode('li'),
       img = createNode('img'),
       span = createNode('span');
@@ -23,6 +23,6 @@ return authors.map(function(author) {
   append(ul, li);
 })
 })
-.catch(function(error) {
+.catch((error) =>{
 console.log(JSON.stringify(error));
 });
