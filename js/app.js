@@ -7,7 +7,7 @@ return parent.appendChild(el);
 }
 
 const ul = document.getElementById('authors');
-const url = 'https://randomuser.me/api/?results=100';
+const url = 'https://randomuser.me/api/?results=200';
 fetch(url)
 .then((resp) => resp.json())
 .then(function(data) {
